@@ -39,11 +39,6 @@ const commentsSchema = mongoose.Schema(
 
 const postSchema = mongoose.Schema(
   {
-    title: {
-      type: String,
-      trime: true,
-      required: true,
-    },
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
@@ -52,10 +47,6 @@ const postSchema = mongoose.Schema(
     body: {
       type: String,
       trime: true,
-      required: true,
-    },
-    status: {
-      type: String,
       required: true,
     },
     upVote: [
