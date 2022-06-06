@@ -1,4 +1,5 @@
 const Joi = require("joi");
+const { join } = require("lodash");
 const { objectId } = require("./custom.validation");
 
 const createPost = {
@@ -56,6 +57,7 @@ const putComment = {
   }),
   body: Joi.object().keys({
     text: Joi.string().required(),
+    postId: Joi.string().allow().optional(),
   }),
 };
 
